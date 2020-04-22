@@ -12,7 +12,7 @@ export class FilterPipe implements PipeTransform {
       const parts = birthDate.split('-')
 
       return players.filter(p => {
-        const part: any = p.birth_date.split('/');
+        const part: any = p.details.birthday.split('/');
         const inputDate = new Date(parts[0], parts[1]-1, parts[2]);
         const scopeDate = new Date(part[2], part[1]-1, part[0]);
         return scopeDate > inputDate

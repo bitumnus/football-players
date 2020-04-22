@@ -1,5 +1,6 @@
 <h1>Home page</h1>
 
 <div>
-  <button *ngIf="isAuth" class="btn" (click)="goToPlayersPage()">Go to Players</button>
+  <button *ngIf="isAuth; else login" class="btn" (click)="goToPlayersPage()">Go to Players</button>
+  <ng-template #login> <p>Click Login to continue.</p> </ng-template>
 </div>
