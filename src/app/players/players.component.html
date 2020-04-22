@@ -1,8 +1,3 @@
-<!-- <input type="radio" name="searchField" id="byName" (click)="searchField = 'fullname'" checked>
-<label for="byName">By Name</label>
-<input type="radio" name="searchField" id="byTeam" (click)="searchField = 'team'">
-<label for="byTeam">By Team</label> -->
-
 <input type="text" [(ngModel)]="search" placeholder="By Name...">
 <input type="text" [(ngModel)]="searchByTeam" placeholder="By Team...">
 <input type="date" [(ngModel)]="birthDate">
@@ -13,12 +8,13 @@
 >Show Team
 </button>
 <div
-    *ngFor="let player of playersServices.players | filter:search:'fullname':birthDate | filter:searchByTeam:'team':birthDate"
+    *ngFor="let player of playersServices.players | filter:search:'name':birthDate | filter:searchByTeam:'team':birthDate"
     class="card"
 >
     <a [routerLink]="['./', player.id]">
-        <h2>{{player.firstname}} {{player.lastname}}</h2>
+        <h2>{{player.name}}</h2>
         <strong *ngIf="showTeams">(Team: {{player.team}})</strong>
         <p>{{player.description}}</p>
     </a>
 </div>
+<p  *ngIf="playersServices.players.length === 0">No results. Try change filter</p>

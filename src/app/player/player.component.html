@@ -1,11 +1,12 @@
 <div>
     <h2> {{player.fullname}} </h2>
+    <strong> {{player.team}} </strong>
+    <hr />
     <img src={{player.photo}} alt={{player.fullname}}>
     <table>
         <tr *ngFor="let p of player.details | keyvalue">
             <th> {{p.key | titlecase}} :</th>
             <td> {{p.value}}</td>
-            <!-- <td rowspan="5"><img src={{player.photo}}></td> -->
         </tr>
     </table>
     <button class="btn" [routerLink]="['/players']" >Back</button>

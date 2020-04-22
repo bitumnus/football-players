@@ -11,7 +11,7 @@ export class PlayersComponent implements OnInit {
 
   search = ''
   searchByTeam = ''
-  birthDate = '1970-1-1'
+  birthDate = '1930-01-01'
   showTeams = false
 
     constructor(
