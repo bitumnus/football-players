@@ -10,15 +10,14 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class PlayersComponent implements OnInit {
 
   search = ''
-  searchField = 'fullname'
+  searchByTeam = ''
+  birthDate = '1970-1-1'
   showTeams = false
 
     constructor(
       public playersServices: PlayersService,
       private route: ActivatedRoute,
-    ) { 
-
-    }
+    ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: Params) => {

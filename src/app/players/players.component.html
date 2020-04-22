@@ -1,9 +1,11 @@
-<input type="radio" name="searchField" id="byName" (click)="searchField = 'fullname'" checked>
+<!-- <input type="radio" name="searchField" id="byName" (click)="searchField = 'fullname'" checked>
 <label for="byName">By Name</label>
 <input type="radio" name="searchField" id="byTeam" (click)="searchField = 'team'">
-<label for="byTeam">By Team</label>
+<label for="byTeam">By Team</label> -->
 
-<input type="text" [(ngModel)]="search">
+<input type="text" [(ngModel)]="search" placeholder="By Name...">
+<input type="text" [(ngModel)]="searchByTeam" placeholder="By Team...">
+<input type="date" [(ngModel)]="birthDate">
 <button
     class="btn"
     [routerLink]="['/players']"
@@ -11,7 +13,7 @@
 >Show Team
 </button>
 <div
-    *ngFor="let player of playersServices.players | filter:search:searchField"
+    *ngFor="let player of playersServices.players | filter:search:'fullname':birthDate | filter:searchByTeam:'team':birthDate"
     class="card"
 >
     <a [routerLink]="['./', player.id]">

@@ -8,7 +8,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { PlayersComponent } from './players/players.component';
 import { HomeComponent } from './home/home.component';
 import { PlayerComponent } from './player/player.component';
-import { DisableBtnDirective } from './directives/disable-btn.directive';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { DisableBtnDirective } from './directives/disable-btn.directive';
     PlayersComponent,
     HomeComponent,
     PlayerComponent,
-    DisableBtnDirective,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
