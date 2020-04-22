@@ -1,0 +1,22 @@
+<input type="radio" name="searchField" id="byName" (click)="searchField = 'fullname'" checked>
+<label for="byName">By Name</label>
+<input type="radio" name="searchField" id="byTeam" (click)="searchField = 'team'">
+<label for="byTeam">By Team</label>
+
+<input type="text" [(ngModel)]="search">
+<button
+    class="btn"
+    [routerLink]="['/players']"
+    [queryParams]="{showTeams: true}"
+>Show Team
+</button>
+<div
+    *ngFor="let player of playersServices.players | filter:search:searchField"
+    class="card"
+>
+    <a [routerLink]="['./', player.id]">
+        <h2>{{player.firstname}} {{player.lastname}}</h2>
+        <strong *ngIf="showTeams">(Team: {{player.team}})</strong>
+        <p>{{player.description}}</p>
+    </a>
+</div>
