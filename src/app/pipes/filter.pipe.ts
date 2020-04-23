@@ -7,15 +7,17 @@ import { Player } from '../players.service';
 export class FilterPipe implements PipeTransform {
 
   transform(players: Player[], ...args: any[]): Player[] {
-    const [search, field, birthDate] = args;
+    const [search, field, fromDate, toDate] = args;
     if (!search.trim()) {
-      const parts = birthDate.split('-')
+      const fd = fromDate.split('-')
+      const td = toDate.split('-')
 
       return players.filter(p => {
-        const part: any = p.details.birthday.split('/');
-        const inputDate = new Date(parts[0], parts[1]-1, parts[2]);
-        const scopeDate = new Date(part[2], part[1]-1, part[0]);
-        return scopeDate > inputDate
+        const ud: any = p.details.birthday.split('/');
+        const inputFromDate = new Date(fd[0], fd[1]-1, fd[2]);
+        const inputToDate = new Date(td[0], td[1]-1, td[2]);
+        const userDate = new Date(ud[2], ud[1]-1, ud[0]);
+        return inputFromDate < userDate && userDate < inputToDate
       })
     }    
     return players.filter(p => {

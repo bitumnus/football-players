@@ -9,6 +9,7 @@ import { AuthService } from './auth.service'
 
 export class AppComponent implements OnInit {
 
+  title = 'Football Players Info'
   constructor(public auth: AuthService) {}
   
   ngOnInit(): void {

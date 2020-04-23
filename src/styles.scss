@@ -32,10 +32,6 @@ ul {
   list-style: none;
 }
 
-img {
-  // width: 100%;
-}
-
 .btn {
   display: inline-block;
   background: #333333;
@@ -114,6 +110,10 @@ textarea {
   font-size: 1.2rem;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
+}
+
+input[type="date"] {
+  width: 50%;
 }
 
 hr {

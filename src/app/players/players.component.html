@@ -1,6 +1,12 @@
-<input type="text" [(ngModel)]="search" placeholder="By Name...">
-<input type="text" [(ngModel)]="searchByTeam" placeholder="By Team...">
-<input type="date" [(ngModel)]="birthDate">
+<label for="">Filter By ...</label>
+<br />
+<input type="text" [(ngModel)]="search" placeholder="... Name">
+<input type="text" [(ngModel)]="searchByTeam" placeholder="... Team">
+<label for="">Birthday From</label>
+<input type="date" [(ngModel)]="fromDate">
+<label for="">To</label>
+<input type="date" [(ngModel)]="toDate">
+
 <button
     class="btn"
     [routerLink]="['/players']"
@@ -8,7 +14,7 @@
 >Show Team
 </button>
 <div
-    *ngFor="let player of playersServices.players | filter:search:'name':birthDate | filter:searchByTeam:'team':birthDate"
+    *ngFor="let player of playersServices.players | filter:search:'name':fromDate:toDate | filter:searchByTeam:'team':fromDate:toDate"
     class="card"
 >
     <a [routerLink]="['./', player.id]">
@@ -17,4 +23,3 @@
         <p>{{player.description}}</p>
     </a>
 </div>
-<p  *ngIf="playersServices.players.length === 0">No results. Try change filter</p>

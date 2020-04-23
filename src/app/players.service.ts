@@ -77,6 +77,23 @@ export class PlayersService {
     },
     {
       id: 4,
+      fullname:'Francesco Totti',
+      name: 'Francesco Totti',
+      description: 'Italian former professional footballer who played for Roma and the Italy national team primarily as an attacking midfielder or second striker, but could also play as a lone striker or winger.',
+      team:'Roma',
+      details: {
+        number: 10,
+        position:'Attacking midfielder / Forward',
+        age: 43,
+        birthday:'27/09/1976',
+        nationality:'Italy',
+        height: 180,
+        weight: 79,
+      },
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/KL-2018_%284%29.jpg/220px-KL-2018_%284%29.jpg'
+    },
+    {
+      id: 5,
       fullname:'Neymar da Silva Santos Júnior',
       name: 'Neymar',
       description: 'Brazilian professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the Brazil national team.',
@@ -93,9 +110,9 @@ export class PlayersService {
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Bra-Cos_%281%29.jpg/220px-Bra-Cos_%281%29.jpg'
     },
     {
-      id: 5,
+      id: 6,
       fullname:'Daniel Owen James',
-      name: 'Daniel ',
+      name: 'Daniel James',
       description: 'Professional footballer who plays as a winger for Premier League club Manchester United and the Wales national team.',
       team:'Manchester United',
       details: {
@@ -110,7 +127,7 @@ export class PlayersService {
       photo: 'https://lh3.googleusercontent.com/proxy/6JjoZA-oiiNAbp0fEFvTcK8ZS_RRItBxpH6VBvWSwvTSLU3vU9UulqZzKB9iWng3phVcDtoLpd2w1c4imqGPGIM0Dixic0NCebif54f_GNPZt1UXzge76Nv2qPh9'
     },
     {
-      id: 6,
+      id: 7,
       fullname:'Romelu Menama Lukaku Bolingoli',
       name: 'Romelu Lukaku',
       description: 'Belgian professional footballer who plays as a striker for Serie A club Inter Milan and the Belgium national team.',
@@ -127,7 +144,7 @@ export class PlayersService {
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Romelu_Lukaku_with_Belgium_before_game_v_Brazil%2C_6_July_2018.jpg.png/175px-Romelu_Lukaku_with_Belgium_before_game_v_Brazil%2C_6_July_2018.jpg.png'
     },
     {
-      id: 7,
+      id: 8,
       fullname:'Luis Suárez Miramontes',
       name: 'Luis Suárez',
       description: 'Spanish former footballer and manager. He played as a midfielder for Deportivo de La Coruña, España Industrial, FC Barcelona, Inter Milan, Sampdoria and the Spain national team.',
@@ -144,7 +161,7 @@ export class PlayersService {
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Luis_Suarez_Miramontes_Inter_San_Siro.png/220px-Luis_Suarez_Miramontes_Inter_San_Siro.png'
     },
     {
-      id: 8,
+      id: 9,
       fullname:'Alessandro Del Piero',
       name: 'Alessandro Del Piero',
       description: 'Italian former professional footballer who mainly played as a deep-lying forward, although he was capable of playing in several offensive positions.',
